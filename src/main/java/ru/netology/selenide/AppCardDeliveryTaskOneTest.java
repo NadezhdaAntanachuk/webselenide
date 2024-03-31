@@ -3,9 +3,11 @@ package ru.netology.selenide;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
+// import static java.nio.channels.Selector.open;
 
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.Keys;
+import org.testng.annotations.Test;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -19,6 +21,7 @@ public class AppCardDeliveryTaskOneTest {
     @Test
     public void shouldBeSuccessfullyCompleted() {
         open("http://localhost:9999");
+        $(cssSelector)
         $(cssSelector("[data-test-id='city'] input")).setValue("Тверь");
         String planningDate = generateDate(4, "dd.MM.yyyy");
         $(cssSelector("[data-test-id='date'] input")).sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
