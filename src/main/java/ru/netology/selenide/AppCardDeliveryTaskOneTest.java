@@ -1,6 +1,15 @@
 package ru.netology.selenide;
 
-import
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.*;
+
+import com.codeborne.selenide.Configuration;
+import org.openqa.selenium.Keys;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 
 public class AppCardDeliveryTaskOneTest {
     private String generateDate(int addDays, String pattern) {
